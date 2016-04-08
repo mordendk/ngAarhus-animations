@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="ClearType" content="true"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Animations</title><meta name="description" content=""><link rel="stylesheet" href="/layout/less/app.css">
+</head>
+<body><section class="text-center"><br><br>
+
+    <p>
+        <button 
+            class="button button-primary button-mini" 
+            anim-events="{click:'anim-spin'}">
+            Button
+        </button>
+    </p>
+    <p>
+        <button 
+            class="button button-primary button-small" 
+            anim-events="{click:'anim-spin'}">
+            Button
+        </button>
+    </p>
+    <p>
+        <button 
+            class="button button-primary" 
+            anim-events="{ click:'anim-spin'}">
+            Button
+         </button>
+    </p>
+    <p>
+        <button 
+            class="button button-primary" 
+            anim-events="{click:'anim-spin'}">
+            Button extra biiiig
+        </button>
+    </p>
+
+</section>
+
+<script src="/layout/js/vendor/raf-polyfill.js"></script>
+<script src="/layout/js/vendor/fastclick.js"></script>
+<script src="/layout/js/vendor/respimage.js"></script>
+<script src="/layout/js/vendor/snabbt.js"></script>
+<script src="/layout/js/vendor/angular.js"></script>
+<script src="/layout/js/vendor/angular-animate.js"></script>
+<script src="/layout/js/app/app.js"></script>
+
+<script src="/layout/js/app/dom-mutation.service.js"></script>
+<script src="/layout/js/app/viewport-events.service.js"></script>
+
+<script src="/layout/js/app/lazy-srcset.directive.js"></script>
+<script src="/layout/js/app/anim-events.directive.js"></script>
+
+<script src="/layout/js/app/shake.animation.js"></script>
+<script src="/layout/js/app/spin.animation.js"></script>
+<script src="/layout/js/app/lazy-srcset.animation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+.small-show,
+.medium-hide,
+.large-hide{
+	display:block;
+}
+.medium-show,
+.small-hide,
+.large-show{
+	display:none;
+}
+
+@media @media-medium {
+	.small-show,
+	.medium-hide{
+		display:none;
+	}
+	.medium-show,
+	.small-hide{
+		display:block;
+	}
+}
+
+@media @media-large {
+	.small-show,
+	.large-hide{
+		display:none;
+	}
+	.large-show,
+	.small-hide{
+		display:block;
+	}
+}

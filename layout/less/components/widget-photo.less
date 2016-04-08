@@ -1,0 +1,46 @@
+.widget-photo{
+	background:#fff;
+	padding:.5rem;
+	margin-bottom: .5rem;
+	position:relative;
+	border-radius:@base-border-radius;
+	&:before, &:after{
+		box-shadow: 0 25px 10px rgba(0, 0, 0, 0.4);
+		position: absolute;
+		bottom: 25px;
+		z-index: -1;
+		width: 90%;
+		height: 50px;
+		content: "";
+		background: rgba(0, 0, 0, 0.4);
+	}
+	&:before{
+		-webkit-transform: rotate(-1deg);
+		-moz-transform: rotate(-1deg);
+		-o-transform: rotate(-1deg);
+		transform: rotate(-1deg);
+		right: auto;
+		left: 10px;
+	}
+	&:after{
+		-webkit-transform: rotate(2deg);
+		-moz-transform: rotate(2deg);
+		-o-transform: rotate(2deg);
+		transform: rotate(2deg);
+		right: 10px;
+		left: auto;
+	}
+}
+
+
+@media @media-medium{
+	.widget-photo{
+		padding:.75rem;
+	}
+}
+
+@media @media-large{
+	.widget-photo{
+		padding:1rem;
+	}
+}

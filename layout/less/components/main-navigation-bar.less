@@ -1,0 +1,124 @@
+.main-navigation-bar{
+	background:#324115;
+	margin-bottom:0;
+	height: 42px;
+	overflow: hidden;
+}
+
+.main-navigation{
+	float:left;
+
+	width: 68%;
+	display:none;
+	> ul{
+		display: table-row;
+		> li{
+			display: table-cell;
+			text-align: center;
+			position:relative;
+			z-index: 1;
+			ul{
+				display: none;
+				position:absolute;
+				box-shadow: 0 .19rem .32rem 0 rgba(0, 0, 0, 0.2);
+				font-family: @heading-font-family;
+				padding:0;
+				margin:0;
+				text-align: left;
+				border-bottom-right-radius: @base-border-radius;
+				border-bottom-left-radius: @base-border-radius;
+				background:#fff;
+				a{
+					font-size: 0.8rem;
+					padding: .75rem 5rem .75rem 1.5rem;
+					display: block;
+					color: #757575;
+					white-space: nowrap;
+					border-top: .065rem solid #f6f6f6;
+					transition: none;
+					position:relative;
+					&:hover{
+						color:#fff;
+						background:@base-link-color;
+					}
+					.icon-arrow-right{
+						font-size: 1rem;
+						line-height: 0;
+						top: 1.25rem;
+						position: absolute;
+						right: 1rem;
+					}
+				}
+				:first-child a{
+					padding-top:.85rem;
+					border-top: none;
+					&:before{
+						content:'';
+						position: absolute;
+						top:-.25rem;
+						left:0;
+						right:0;
+						height:.25rem;
+						overflow: hidden;
+						box-shadow: @base-box-shadow;
+
+					}
+				}
+				:last-child a{
+					border-bottom-right-radius: @base-border-radius;
+					border-bottom-left-radius: @base-border-radius;
+				}
+			}
+			> a{
+				display: inline-block;
+				padding: .75rem .5rem;
+				color: #fff;
+				font-family: @heading-font-family;
+				font-size: 0.8rem;
+				outline: none;
+
+			}
+			&:first-child {
+				text-align: left;
+				&:before{
+					content:none;
+					display: none;
+				}
+				> a{
+					padding-left: .15rem;
+				}
+
+			}
+			&.active{
+				> a{
+					position:relative;
+					z-index: 2;
+					&:before{
+						content:'';
+						display:block;
+						width:0;
+						height:0;
+						overflow:hidden;
+						border:.5rem solid transparent;
+						border-top-color: #353c3e;
+						position: absolute;
+						bottom:-.85rem;
+						left:50%;
+						margin-left: -.5rem;
+
+					}
+				}
+				ul{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+@media @media-medium {
+	.main-navigation{
+		display: table;
+	}
+}

@@ -1,0 +1,37 @@
+.transition (@value1,@value2:X,...)
+{
+	@value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+
+	-webkit-transition: @value;
+	-moz-transition: @value;
+	-ms-transition: @value;
+	-o-transition: @value;
+	transition: @value;
+}
+
+.transform(@value1,@value2:X,...)
+{
+	@value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+
+	-webkit-transform: @value;
+	-moz-transform: @value;
+	-ms-transform: @value;
+	-o-transform: @value;
+	transform: @value;
+}
+
+.linear-gradient-down(@color-step1, @color-step2, @step-size){
+	background: @color-step2;
+	background: -moz-linear-gradient(top,  @color-step1 0, @color-step2 @step-size);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,@color-step1), color-stop(@step-size, @color-step2));
+	background: -webkit-linear-gradient(top,  @color-step1 0, @color-step2 @step-size);
+	background: -o-linear-gradient(top,  @color-step1 0, @color-step2 @step-size);
+	background: -ms-linear-gradient(top, @color-step1 0, @color-step2 @step-size);
+	background: linear-gradient(to bottom, @color-step1 0, @color-step2 @step-size);
+}
+
+.ellipsis(){
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
